@@ -7,12 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import { ErrorHandlerComponent } from './error-handler/error-handler.component';
+import { JobDetailComponent } from './job-search/job-detail/job-detail.component';
+import { NotificationsBoxesComponent } from './notifications-boxes/notifications-boxes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     JobSearchComponent,
     MenuBarComponent,
+    ErrorHandlerComponent,
+    JobDetailComponent,
+    NotificationsBoxesComponent,
   ],
   imports: [
     BrowserModule,
