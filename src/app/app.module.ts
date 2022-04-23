@@ -10,6 +10,7 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 import { JobDetailComponent } from './job-search/job-detail/job-detail.component';
 import { NotificationsBoxesComponent } from './notifications-boxes/notifications-boxes.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NotificationsBoxesComponent } from './notifications-boxes/notifications
     BrowserModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    SweetAlert2Module
 
   ],
   providers: [
