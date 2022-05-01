@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-notifications-boxes',
   templateUrl: './notifications-boxes.component.html',

@@ -11,6 +11,8 @@ import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 import { JobDetailComponent } from './job-search/job-detail/job-detail.component';
 import { NotificationsBoxesComponent } from './notifications-boxes/notifications-boxes.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { MaterialModule } from './material/material.module';
+
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
-    SweetAlert2Module
+    SweetAlert2Module,
+    MaterialModule
 
   ],
   providers: [
     {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [NotificationsBoxesComponent]
 })
 export class AppModule { }
