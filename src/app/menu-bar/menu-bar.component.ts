@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-menu-bar',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
 
-  constructor() { }
+  @Output() selectedmenu = new EventEmitter<{ [id: string]: string; }>();
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.buttonOnClick("Application", "Application")
+  }
+
+  buttonOnClick(buttonid: string, buttonname: string) {
+    this.selectedmenu.emit({ "buttonid": buttonid, "buttonname": buttonname});
   }
 
 }

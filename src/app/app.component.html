@@ -1,6 +1,7 @@
-<app-menu-bar></app-menu-bar>
-<app-notifications-boxes></app-notifications-boxes>
-<app-job-detail></app-job-detail>
-<app-job-search></app-job-search>
-<app-error-handler></app-error-handler>
+<app-menu-bar (selectedmenu)="componentSelector($event)"></app-menu-bar>
+<app-notifications-boxes *ngIf="notification"
+                         [notificationdictionary]="notificationdictionary"></app-notifications-boxes>
+<app-detail-panel *ngIf="!deeperror && details"></app-detail-panel>
+<app-job-search *ngIf="!deeperror && searchjobs"></app-job-search>
+<app-error-handler *ngIf="deeperror" [errordictionary]="errordictionary"></app-error-handler>
 
