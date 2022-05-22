@@ -13,12 +13,15 @@ export class AppComponent implements OnInit {
   errordictionary: { [id: string]: any; };
   notificationdictionary:{ [id: string]: any; };
   searchjobs: boolean;
-
+  jobDataSet: any;
+  displayableDataset: any;
   constructor() {
+    this.jobDataSet = {};
     this.details = false;
     this.searchjobs = false;
     this.deeperror = false;
     this.notification = false;
+    this.displayableDataset = {}
     this.errordictionary = {
       "error_message": "Access restricted", "error_code": "403",
       "contact": "ivanrezis@yandex.com"
@@ -62,6 +65,12 @@ export class AppComponent implements OnInit {
       "error_message": errormessage, "error_code": errorcode,
       "contact": contact,
     };
+  }
+
+  seeJobData(event: any){
+    this.details = true;
+    this.displayableDataset = {};
+    this.jobDataSet = event
   }
 
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-job-search',
@@ -7,15 +7,18 @@ import {Component, OnInit} from '@angular/core';
 })
 export class JobSearchComponent implements OnInit {
 
-  constructor() { }
+  @Output() eventClicked = new EventEmitter<Event>();
+
+  constructor() {
+  }
 
   ngOnInit(): void {
 
 
   }
 
-  onClick() {
-
+  onClickEvent(event: any) {
+    this.eventClicked.emit(event);
   }
 
 }
