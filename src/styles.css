@@ -12,6 +12,10 @@
   --acc-back: cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
 
+#seprator{
+  margin-top: 5%;
+}
+
 
 html, body { height: 100%; }
 
@@ -802,4 +806,60 @@ input[type=checkbox]:checked + label {
 @keyframes moving {
   0%, 90% { top: 0; left: 0; }
   100%  { top: -100px; left: 0; }
+}
+
+.modal-newsletter {
+  z-index: 10;
+  border-radius: 15px;
+  margin-top: 10%;
+  margin-left: 25%;
+  height: auto;
+  min-height: 40%;
+  width: auto;
+  min-width: 50%;
+  font-size: 15px;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  text-align: center;
+  background: #e4e4e4;
+  color: black;
+}
+.modal-newsletter h4 {
+  color: #000;
+  font-size: 30px;
+  margin: 0;
+  font-weight: bold;
+  text-align: center
+}
+.icon-box {
+  font-size:80px;
+  z-index: 9;
+  text-align: center;
+  margin: 10px 0;
+}
+.hint-text {
+  margin: 100px auto;
+  text-align: center;
+}
+.newsletter-form-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly
+}
+.newsletter-input {
+  flex-basis: 40%
+}
+
+#newspaper_content{
+  margin-top: 5%;
+}
+
+#trigger_button{
+  margin: auto 2% 2% auto;
+  width: 10%;
+}
+#close_button{
+  margin: auto 2% 2% auto;
+  width: 10%;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-job-search',
@@ -11,6 +11,10 @@ export class JobSearchComponent implements OnInit {
 
   ngOnInit(): void {
 
+
+  }
+
+  onClick() {
 
   }
 
