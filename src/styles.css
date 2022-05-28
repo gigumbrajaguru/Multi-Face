@@ -213,14 +213,12 @@ input[type='search']::-webkit-search-results-decoration {
   font-family:Arial, sans serif;
 }
 
-
-
-
 /*TAGS*/
 .tags-wrap{
-  height:0px;
+  margin-left: 5%;
+  height: 50px;
   background:#3b5167;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .tags-wrap.active{

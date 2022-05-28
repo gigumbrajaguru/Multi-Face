@@ -13,8 +13,7 @@
 <div id="tags-wrap" class="wrap-top tags-wrap">
   <div class="width">
     <ul class="clearfix">
-      <li>tag#1</li>
-      <li>tag#2</li>
+      <li *ngFor="let tag of tags">{{tag}}</li>
 
     </ul>
     <div id="search-results"></div>
@@ -22,11 +21,11 @@
 </div>
 
 <div id="search-results-box">
-  <div class="looper">
+  <div *ngFor="let result of results" class="looper">
     <div class="clear-elements">
       <div class="row">
         <div class="job-title">
-          job-title
+          {{result.job_title}}
           <div class="job-location">
             job-location
           </div>
@@ -40,10 +39,10 @@
       </div>
 
       <div class="job-skill">
-       <div class="job-simple-description">
-       </div>
-       <div class="job-type">
-       </div>
+        <div class="job-simple-description">
+        </div>
+        <div class="job-type">
+        </div>
       </div>
       <div class="row">
         <div class="job-salary">
