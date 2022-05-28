@@ -8,12 +8,20 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class JobSearchComponent implements OnInit {
 
   @Output() eventClicked = new EventEmitter<Event>();
-
+  tags: any[];
+  jobdata: { [name: string]: string };
+  results: any[];
   constructor() {
+    this.tags = [];
+    this.results = [];
+    this.jobdata = {};
   }
 
   ngOnInit(): void {
+    this.tags = ["One", "Two"];
+    this.jobdata = {"job_title": "Software Engineer"}
 
+    this.results = [{"job_title": "Software Engineer"}, {"job_title": "Software Developer"}];
 
   }
 
