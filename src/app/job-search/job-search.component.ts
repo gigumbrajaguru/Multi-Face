@@ -19,7 +19,7 @@ export class JobSearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.tags = ["One", "Two"];
-    this.jobdata = {"job_title": "Software Engineer"}
+    this.jobdata = {"job_title": "Software Engineer"};
 
     this.results = [{"job_title": "Software Engineer"}, {"job_title": "Software Developer"}];
 
