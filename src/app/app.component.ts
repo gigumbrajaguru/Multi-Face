@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     this.searchjobs = false;
     this.deeperror = false;
     this.notification = false;
-    this.displayableDataset = {}
+    this.displayableDataset = {};
     this.errordictionary = {
       "error_message": "Access restricted", "error_code": "403",
       "contact": "ivanrezis@yandex.com"
@@ -42,18 +42,18 @@ export class AppComponent implements OnInit {
   componentSelector(event: { [id: string]: string }) {
     this.searchjobs = false;
     this.details = false;
-    if (event["buttonid"].toString() == "NEWS") {
+    if ("NEWS" === event["buttonid"].toString()) {
       this.errorPageLoader(true, "Access restricted", "403", "ivanrezis@yandex.com")
-    } else if (event["buttonid"].toString() == "Skills") {
+    } else if ("Skills" === event["buttonid"].toString()) {
       this.errorPageLoader(true, "Access restricted", "403", "ivanrezis@yandex.com")
-    } else if (event["buttonid"].toString() == "Application") {
+    } else if ("Application" === event["buttonid"].toString()) {
       this.searchjobs = true;
       this.errorPageLoader(false, "Access restricted", "403", "ivanrezis@yandex.com")
-    } else if (event["buttonid"].toString() == "Shop") {
+    } else if ("Shop" === event["buttonid"].toString()) {
       this.errorPageLoader(true, "Access restricted", "403", "ivanrezis@yandex.com")
-    } else if (event["buttonid"].toString() == "Research") {
+    } else if ("Research" === event["buttonid"].toString()) {
       this.errorPageLoader(true, "Access restricted", "403", "ivanrezis@yandex.com")
-    } else if (event["buttonid"].toString() == "About") {
+    } else if ("About" === event["buttonid"].toString()) {
       this.errorPageLoader(true, "Access restricted", "403", "ivanrezis@yandex.com")
     }
   }
