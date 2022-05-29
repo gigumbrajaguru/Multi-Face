@@ -9,7 +9,6 @@
     "test": "ng test",
     "e2e": "ng e2e",
     "heroku-postbuild": "ng build --prod"
-
   },
   "private": true,
   "dependencies": {
