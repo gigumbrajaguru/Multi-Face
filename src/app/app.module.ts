@@ -12,6 +12,8 @@ import { DetailsComponent } from './detail-panel/details.component';
 import { NotificationsBoxesComponent } from './notifications-boxes/notifications-boxes.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { MaterialModule } from './material/material.module';
+import { MovieWatchComponent } from './movie-watch/movie-watch.component';
+
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import { MaterialModule } from './material/material.module';
     ErrorHandlerComponent,
     DetailsComponent,
     NotificationsBoxesComponent,
+    MovieWatchComponent,
   ],
   imports: [
     BrowserModule,

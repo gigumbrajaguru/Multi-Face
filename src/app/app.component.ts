@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {empty} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -12,13 +13,19 @@ export class AppComponent implements OnInit {
   notification: boolean;
   errordictionary: { [id: string]: any; };
   notificationdictionary:{ [id: string]: any; };
+  searchmovie: string;
   searchjobs: boolean;
   jobDataSet: any;
+  watchmovies:boolean;
+  displayableMovie: any;
   displayableDataset: any;
   constructor() {
+    this.searchmovie = "";
     this.jobDataSet = {};
     this.details = false;
     this.searchjobs = false;
+    this.watchmovies = false;
+    this.displayableMovie = "";
     this.deeperror = false;
     this.notification = false;
     this.displayableDataset = {};
@@ -42,12 +49,16 @@ export class AppComponent implements OnInit {
   componentSelector(event: { [id: string]: string }) {
     this.searchjobs = false;
     this.details = false;
+    this.watchmovies = false;
     if ("NEWS" === event["buttonid"].toString()) {
       this.errorPageLoader(true, "Access restricted", "403", "ivanrezis@yandex.com")
-    } else if ("Skills" === event["buttonid"].toString()) {
-      this.errorPageLoader(true, "Access restricted", "403", "ivanrezis@yandex.com")
+    } else if ("Movies" === event["buttonid"].toString()) {
+      this.watchmovies = true;
+      this.searchjobs = false;
+      this.errorPageLoader(false, "Access restricted", "403", "ivanrezis@yandex.com")
     } else if ("Application" === event["buttonid"].toString()) {
       this.searchjobs = true;
+      this.watchmovies = false;
       this.errorPageLoader(false, "Access restricted", "403", "ivanrezis@yandex.com")
     } else if ("Shop" === event["buttonid"].toString()) {
       this.errorPageLoader(true, "Access restricted", "403", "ivanrezis@yandex.com")
@@ -71,6 +82,11 @@ export class AppComponent implements OnInit {
     this.details = true;
     this.displayableDataset = {};
     this.jobDataSet = event
+  }
+  searchMovie(event: any){
+    this.displayableDataset = {};
+    this.searchmovie = event
+    console.log(this.searchmovie)
   }
 
 }
