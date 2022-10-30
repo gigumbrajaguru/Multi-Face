@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {empty} from "rxjs";
+import  {MovieWatchSericeService} from "../services/movie-watch-serice.service"
+import {VideoData} from "../data_class/video-data"
+
 
 @Component({
   selector: 'app-root',
@@ -7,20 +9,25 @@ import {empty} from "rxjs";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Job-Finder';
+  title = 'Multi-Face';
   deeperror: boolean;
+  waiter: boolean;
   details: boolean;
   notification: boolean;
   errordictionary: { [id: string]: any; };
   notificationdictionary:{ [id: string]: any; };
-  searchmovie: string;
   searchjobs: boolean;
   jobDataSet: any;
+  user_movie_name: string;
+  user_movie_year : number
   watchmovies:boolean;
   displayableMovie: any;
   displayableDataset: any;
-  constructor() {
-    this.searchmovie = "";
+  constructor
+  (
+    private videodataservice:MovieWatchSericeService
+  )
+  {
     this.jobDataSet = {};
     this.details = false;
     this.searchjobs = false;
@@ -28,12 +35,14 @@ export class AppComponent implements OnInit {
     this.displayableMovie = "";
     this.deeperror = false;
     this.notification = false;
+    this.user_movie_name = "";
+    this.user_movie_year = 0;
     this.displayableDataset = {};
+    this.waiter = false;
     this.errordictionary = {
       "error_message": "Access restricted", "error_code": "403",
       "contact": "ivanrezis@yandex.com"
     };
-
     this.notificationdictionary = {
       "stylenotifyelement": "fa-heart",
       "notifytitle": "Attention",
@@ -83,10 +92,8 @@ export class AppComponent implements OnInit {
     this.displayableDataset = {};
     this.jobDataSet = event
   }
-  searchMovie(event: any){
-    this.displayableDataset = {};
-    this.searchmovie = event
-    console.log(this.searchmovie)
+  searchMovie(event: VideoData){
+
   }
 
 }

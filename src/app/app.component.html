@@ -4,5 +4,5 @@
 <app-detail-panel *ngIf="!deeperror && details" [event]="displayableDataset"></app-detail-panel>
 <app-job-search (eventClicked)="seeJobData($event)" *ngIf="!deeperror && searchjobs"></app-job-search>
 <app-error-handler *ngIf="deeperror" [errordictionary]="errordictionary"></app-error-handler>
-<app-movie-watch *ngIf="watchmovies" (eventClicked)="searchMovie($event)"></app-movie-watch>
+<app-movie-watch *ngIf="watchmovies" (searchClicked)="searchMovie($event)"></app-movie-watch>
 

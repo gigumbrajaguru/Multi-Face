@@ -1,0 +1,16 @@
+.movie-category{
+  font-weight: bold;
+  font-size: 90%;
+}
+.movie-posted-date{
+  margin-left: auto;
+  margin-right: 0;
+  width: 20%;
+  font-weight: bold;
+  font-size: 90%;
+}
+.movie-title{
+  font-weight: bold;
+  color: rgb(165, 42, 42);
+  font-size: 100%;
+}

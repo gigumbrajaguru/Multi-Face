@@ -13,6 +13,8 @@ import { NotificationsBoxesComponent } from './notifications-boxes/notifications
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { MaterialModule } from './material/material.module';
 import { MovieWatchComponent } from './movie-watch/movie-watch.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -28,11 +30,13 @@ import { MovieWatchComponent } from './movie-watch/movie-watch.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
     SweetAlert2Module,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
 
   ],
   providers: [
