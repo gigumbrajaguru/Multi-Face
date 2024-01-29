@@ -6,7 +6,7 @@
 version: 2
 updates:
   - package-ecosystem: "composer"
-    # Files stored in repository root
+    # Files stored in the repository root
     directory: "/"
     schedule:
       interval: "weekly"
