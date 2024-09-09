@@ -29,7 +29,7 @@
     "path": "^0.12.7",
     "rxjs": "~7.5.0",
     "save-dev": "^0.0.1-security",
-    "sweetalert2": "^11.12.4",
+    "sweetalert2": "^11.13.3",
     "tslib": "^2.3.0",
     "typescript": "~4.6.2",
     "terser": ">=5.14.2",
